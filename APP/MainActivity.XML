@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="10px">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TableLayout android:layout_margin="5dp">
+                <TableRow>
+                    <Button
+                        android:id="@+id/ViewData"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:layout_column="1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10px"
+                        android:paddingLeft="40px"
+                        android:paddingRight="40px"
+                        android:background="@color/button"
+                        android:text="@string/DataView"
+                        android:textColor="@color/colorPrimary" />
+                    <Button
+                        android:id="@+id/info"
+                        android:layout_width="0px"
+                        android:layout_column="2"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:background="@color/button"
+                        android:paddingLeft="40px"
+                        android:paddingRight="40px"
+                        android:text="@string/ViewInfo"
+                        android:textColor="@color/colorPrimary" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/solutionLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary"
+                android:baselineAligned="false">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/S.L.Name"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/SolutionL"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/S.L.Time"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/S.L.Data"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="18dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:id="@+id/color1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="5dp"
+                        android:src="@drawable/circle" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/pHlevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/PH_Name"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/PHlevel"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/PH_Time"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/PH_Data"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="5dp"
+                        android:src="@drawable/circle" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/mainSolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/mainSolutionName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/MainSolution"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/mainSolutionTime"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/mainSolutionData"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="5dp"
+                        android:src="@drawable/circle" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/temperatureName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/Temp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/temperatureTime"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/temperatureData"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/PH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/PHName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/PH"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/PHTime"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/PHData"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/Humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/HumidityName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/Humi"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/HumidityTime"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/HumidityData"
+                        android:layout_weight="2"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="8dp"
+                        android:layout_column="1" android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/WaterLT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimary">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/WaterLTName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:text="@string/WaterT"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_column="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/background"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/WaterLTime"
+                        android:layout_width="135dp"
+                        android:layout_column="3"
+                        android:padding="8dp"
+                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/WaterLTData"
+                        android:layout_weight="2"
+                        android:layout_column="1"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"                        android:textColor="@color/background"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="5dp"
+                        android:src="@drawable/circle" />
+                </TableRow>
+            </TableLayout>
+        </TableLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
